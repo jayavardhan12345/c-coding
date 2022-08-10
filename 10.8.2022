@@ -1,0 +1,21 @@
+#include<stdio.h>
+void main()
+{
+	int x,y,r,n;
+	int i=1,ans=0;
+	printf("enter value of n\n ");
+	scanf("%d",&n);
+	printf("enter values of x & y \n");
+	scanf("%d %d",&x,&y);
+	while(n>0)
+	{
+		r=n%10;
+		if(r==x)
+		ans=y*i+ans;
+		else
+		ans=r*i+ans;
+		i=i*10;
+		n=n/10;
+	}
+	printf("%d",ans);
+}
